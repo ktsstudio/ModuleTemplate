@@ -11,6 +11,8 @@ fun getComposeScreenTemplate(
     package $packageName.ui
 
     import androidx.compose.runtime.Composable
+    import androidx.compose.runtime.getValue
+    import androidx.lifecycle.compose.collectAsStateWithLifecycle
     ${"import org.koin.androidx.compose.koinViewModel".appendIf(withViewModel)}
     ${"import $packageName.presentation.${classPrefix}ViewModel".appendIf(withViewModel)}
 

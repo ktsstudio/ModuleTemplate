@@ -13,10 +13,10 @@ fun getFeatureApiScreenTemplate(
         import androidx.navigation.NavGraphBuilder
         import com.google.accompanist.navigation.animation.composable
         import $packageName.ui.Root${classPrefix}Screen 
-        import $corePackageName.mobile.navigation.utils.navigateOnResume
+        import $corePackageName.mobile.navigation.utils.navigateOnResumed
         
         fun NavController.navigateToReservationCreate() {
-            navigateOnResume(
+            navigateOnResumed(
                 route = "$classPrefix", // TODO: replace to Screen.${classPrefix}.route
             ) {
                 launchSingleTop = true

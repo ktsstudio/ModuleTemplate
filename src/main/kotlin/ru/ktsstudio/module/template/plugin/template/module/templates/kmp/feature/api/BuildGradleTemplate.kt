@@ -12,7 +12,6 @@ fun getApiBuildGradleTemplate(
             sourceSets {
                 commonMain {
                     implementations(
-                        project(":shared:core-db"),
                         Deps.KmmViewModel.core,
                         Deps.KmmViewModel.cFlow,
                         Deps.Kotlin.immutableСollections,

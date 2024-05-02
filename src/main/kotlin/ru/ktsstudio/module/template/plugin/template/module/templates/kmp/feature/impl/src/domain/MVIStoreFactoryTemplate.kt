@@ -28,7 +28,7 @@ fun getMVIStoreFactoryTemplate(
                 initialState = State.Default,
                 bootstrapper = null,
                 executorFactory = {
-                    ${classPrefix}Executor(${"${classPrefix.lowercase()}Repository = ${classPrefix.lowercase()}Repository".appendIf(withRepository)}),
+                    ${classPrefix}Executor(${"${classPrefix.lowercase()}Repository = ${classPrefix.lowercase()}Repository".appendIf(withRepository)})
                 },
                 reducer = ${classPrefix}Reducer(),
             ) {}

@@ -29,7 +29,7 @@ fun getImplKoinTemplate(
         factory {
             ${classPrefix}StoreFactory(
                 storeFactory = get(),
-                ${"${classPrefix.lowercase()}Repository = get(),".appendIf(withRepository)},
+                ${"${classPrefix.lowercase()}Repository = get(),".appendIf(withRepository)}
             ).create()
         }
          """.trimIndent().appendIf(withMvi)
