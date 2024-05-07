@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>ru.ktsstudio.module.template.plugin</id>
+    <id>ru.ktstech.module.template.plugin</id>
     <name>KTSModuleTemplate</name>
     <vendor email="swallowchik@gmail.com">KTS Studio</vendor>
     <depends>com.intellij.modules.platform</depends>
@@ -7,6 +7,6 @@
     <depends>org.jetbrains.android</depends>
     <depends>com.intellij.modules.androidstudio</depends>
     <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
-        <wizardTemplateProvider implementation="ru.ktsstudio.module.template.plugin.MyWizardTemplateProvider"/>
+        <wizardTemplateProvider implementation="ru.ktstech.module.template.plugin.MyWizardTemplateProvider"/>
     </extensions>
 </idea-plugin>
