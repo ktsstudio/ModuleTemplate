@@ -20,21 +20,21 @@ fun getMVIExecutorTemplate(
     internal class ${classPrefix}Executor${"""(
         private val ${classPrefix.lowercase()}Repository: ${classPrefix}Repository,
     )""".appendIf(withRepository)} : BaseExecutor<Intent, Nothing, State, Message, Label>() {
+            override suspend fun suspendExecuteIntent(intent: Intent) {
+                when (intent) {
+                    Intent.Init -> init()
+                    Intent.Refresh -> refresh()
+                }
+            }
 
-        override suspend fun suspendExecuteIntent(intent: Intent, getState: () -> State) = when (intent) {
-            Intent.Init -> init(getState = getState)
-            Intent.Refresh -> refresh(getState = getState)
-        }
-
-        suspend fun init(getState: () -> State) {
-            TODO("implement the init method")
-        }
-
-        suspend fun refresh(getState: () -> State) {
-            TODO("implement the init method")
-        }
+            private suspend fun init() {
+                TODO("implement the init method")
+            }
+        
+            private suspend fun refresh() {
+                TODO("implement the init method")
+            }
     }
-
 """.trimIndent()
 }
 

@@ -18,7 +18,7 @@ fun getViewModelTemplate(
             import ${packageName}.presentation.mappers.Ui${classPrefix}StateMapper
             import ${packageName}.presentation.models.Ui${classPrefix}Label
             import ${packageName}.presentation.models.Ui${classPrefix}State
-            import ${corePackageName}.core.presentation.common.BaseViewModel
+            import ${corePackageName}.core.presentation.BaseViewModel
             
             class ${classPrefix}ViewModel(
                 private val store: ${classPrefix}Store, 

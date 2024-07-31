@@ -6,11 +6,11 @@ import ru.ktstech.module.template.plugin.common.pascalCase
 val kmpFeatureModuleTemplate
     get() = template {
         name = "KMP Feature Module"
-        minApi = 21
         description = "Shared feature module for kmp"
 
         category = Category.Folder
         formFactor = FormFactor.Mobile
+
         useGenericAndroidTests = false
         useGenericLocalTests = false
 

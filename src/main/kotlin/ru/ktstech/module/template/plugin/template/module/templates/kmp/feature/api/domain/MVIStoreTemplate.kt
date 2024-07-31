@@ -28,8 +28,8 @@ fun getMVIStoreTemplate(
         }
     
         sealed interface Intent {
-            object Init : Intent
-            object Refresh : Intent
+            data object Init : Intent
+            data object Refresh : Intent
         }
     
         sealed interface Label {

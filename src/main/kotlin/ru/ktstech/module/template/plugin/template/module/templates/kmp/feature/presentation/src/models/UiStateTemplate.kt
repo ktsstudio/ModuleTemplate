@@ -7,7 +7,8 @@ fun getUiStateModelTemplate(
 ): String {
     return """
     package ${packageName}.presentation.models
-    package ${corePackageName}.common.ui.BaseUiState
+    
+    import ${corePackageName}.common.ui.BaseUiState
     
     data class Ui${classPrefix}State(
         override val loading: Boolean = true,

@@ -6,20 +6,8 @@ fun getPresentationBuildGradleTemplate(
     return """
         plugins {
             id("multiplatform-feature-setup")
-        }
-
-        kotlin {
-            sourceSets {
-                commonMain {
-                    implementations(
-                        Deps.KmmViewModel.core,
-                        Deps.KmmViewModel.cFlow,
-                        Deps.Kotlin.immutableСollections,
-                    )
-                }
-            }
-        }
-
+        } 
+        
         android {
             namespace = "$packageName.presentation"
         } 

@@ -24,7 +24,7 @@ fun RecipeExecutor.createKmpFeatureModuleFiles(
 
     println(moduleData.projectTemplateData)
 
-    if(withApi) {
+    if (withApi) {
         createApi(
             moduleData = moduleData,
             classPrefix = classPrefix,
@@ -34,7 +34,7 @@ fun RecipeExecutor.createKmpFeatureModuleFiles(
         )
     }
 
-    if(withImpl) {
+    if (withImpl) {
         createImpl(
             moduleData = moduleData,
             classPrefix = classPrefix,
@@ -45,7 +45,7 @@ fun RecipeExecutor.createKmpFeatureModuleFiles(
         )
     }
 
-    if(withPresentation) {
+    if (withPresentation) {
         createPresentation(
             moduleData = moduleData,
             classPrefix = classPrefix,
