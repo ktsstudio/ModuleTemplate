@@ -11,9 +11,9 @@ fun getFeatureApiScreenTemplate(
         import androidx.compose.animation.ExperimentalAnimationApi
         import androidx.navigation.NavController
         import androidx.navigation.NavGraphBuilder
-        import com.google.accompanist.navigation.animation.composable
+        import androidx.navigation.compose.composable
         import $packageName.ui.Root${classPrefix}Screen 
-        import $corePackageName.mobile.navigation.utils.navigateOnResumed
+        import $corePackageName.mobile.navigation.navigateOnResumed
         
         fun NavController.navigateToReservationCreate() {
             navigateOnResumed(
@@ -23,7 +23,6 @@ fun getFeatureApiScreenTemplate(
             }
         }
          
-        @OptIn(ExperimentalAnimationApi::class)
         fun NavGraphBuilder.composableReservationCreateScreen( 
             onBack: () -> Unit,
         ) {

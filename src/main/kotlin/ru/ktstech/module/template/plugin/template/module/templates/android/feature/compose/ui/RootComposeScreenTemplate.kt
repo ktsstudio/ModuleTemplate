@@ -13,6 +13,8 @@ fun getRootComposeScreenTemplate(
 
     import androidx.compose.runtime.Composable
     import androidx.compose.runtime.getValue
+    import androidx.compose.runtime.LaunchedEffect
+    import androidx.compose.ui.platform.LocalContext
     import androidx.lifecycle.compose.collectAsStateWithLifecycle
     ${"import org.koin.androidx.compose.koinViewModel".appendIf(withViewModel)}
     ${"import ${packageName}.presentation.${classPrefix}ViewModel".appendIf(withViewModel)}
@@ -31,9 +33,13 @@ fun getRootComposeScreenTemplate(
          val context = LocalContext.current
         """.trimIndent().appendIf(withViewModel)
         }
-       
-        ${classPrefix}Screen(${"state = state".appendIf(withViewModel)})
         
+        
+        ${classPrefix}Screen(
+            ${"state = state".appendIf(withViewModel)}
+            onBackClick = onBackClick,
+        )
+            
         ${
         """
          LaunchedEffect(key1 = true) {

@@ -22,6 +22,7 @@ fun getComposeBuildGradleTemplate(
             implementation(Deps.KmmViewModel.cFlow)
             implementation(Deps.Koin.core)
             implementation(Deps.Koin.android)
+            implementation(Deps.Koin.compose)
             composeDependency()
         }
 
