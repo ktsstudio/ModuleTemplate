@@ -5,7 +5,7 @@ import com.android.tools.idea.wizard.template.RecipeExecutor
 import org.jetbrains.kotlin.konan.file.File
 import ru.ktstech.module.template.plugin.common.BUILD_GRADLE_FILE_NAME
 import ru.ktstech.module.template.plugin.common.saveFile
-import ru.ktstech.module.template.plugin.common.getInnerModulePath
+import ru.ktstech.module.template.plugin.common.getCommonMainInnerModulePath
 import ru.ktstech.module.template.plugin.template.module.templates.kmp.feature.api.domain.getMVIStoreTemplate
 import ru.ktstech.module.template.plugin.template.module.templates.kmp.feature.api.getApiBuildGradleTemplate
 
@@ -16,7 +16,7 @@ fun RecipeExecutor.createApi(
     moduleName: String,
     withMvi: Boolean,
 ) {
-    val (rootPath, srcPath) = moduleData.getInnerModulePath(
+    val (rootPath, srcPath) = moduleData.getCommonMainInnerModulePath(
         moduleName = moduleName,
         innerModuleName = "api",
     )

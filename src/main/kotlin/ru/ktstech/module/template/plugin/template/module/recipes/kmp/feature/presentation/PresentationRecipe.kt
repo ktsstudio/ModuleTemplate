@@ -5,7 +5,7 @@ import com.android.tools.idea.wizard.template.RecipeExecutor
 import org.jetbrains.kotlin.konan.file.File
 import ru.ktstech.module.template.plugin.common.BUILD_GRADLE_FILE_NAME
 import ru.ktstech.module.template.plugin.common.saveFile
-import ru.ktstech.module.template.plugin.common.getInnerModulePath
+import ru.ktstech.module.template.plugin.common.getCommonMainInnerModulePath
 import ru.ktstech.module.template.plugin.template.module.templates.kmp.feature.presentation.getPresentationBuildGradleTemplate
 import ru.ktstech.module.template.plugin.template.module.templates.kmp.feature.presentation.src.di.getPresentationKoinTemplate
 import ru.ktstech.module.template.plugin.template.module.templates.kmp.feature.presentation.src.getViewModelTemplate
@@ -23,7 +23,7 @@ fun RecipeExecutor.createPresentation(
 ) {
     val corePackageName = packageName.split(".").subList(0, 2).joinToString(".") { it }
 
-    val (rootPath, srcPath) = moduleData.getInnerModulePath(
+    val (rootPath, srcPath) = moduleData.getCommonMainInnerModulePath(
         moduleName = moduleName,
         innerModuleName = "presentation",
     )
